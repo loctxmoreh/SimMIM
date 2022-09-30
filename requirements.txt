@@ -1,5 +1,5 @@
 pyyaml
 scipy
 termcolor
-timm
+timm==0.4.12    # required by data/data_finetune.py
 yacs
