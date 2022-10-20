@@ -1,0 +1,9 @@
+#!/bin/bash
+
+python -m torch.distributed.launch \
+        --nproc_per_node 1 \
+        main_finetune.py \
+        --eval \
+        --cfg configs/swin_base__800ep/simmim_finetune__swin_base__img224_window7__800ep.yaml \
+        --resume simmim_finetune__swin_base__img224_window7__800ep.pth \
+        --data-path /data/work/dataset/imagenet_100cls
