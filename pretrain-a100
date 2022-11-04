@@ -1,0 +1,8 @@
+#!/bin/bash
+
+python -m torch.distributed.launch \
+        --nproc_per_node 1 \
+        main_simmim.py \
+        --cfg configs/swin_base__800ep/simmim_pretrain__swin_base__img192_window6__800ep.yaml \
+        --batch-size 128 \
+        --data-path /data/work/dataset/imagenet_100cls/train
