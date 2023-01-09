@@ -1,0 +1,19 @@
+# vim: set shiftwidth=2 tabstop=2 softtabstop=-1 expandtab:
+name: simmim
+channels:
+  - pytorch
+dependencies:
+  - python=3.8
+  - pytorch=1.7.1
+  - cpuonly
+  - torchvision
+  - torchaudio
+  - numpy
+  - protobuf=3.13.0
+  - pip
+  - pip:
+    # - torch==1.10.0+cu111.moreh23.1.1
+    # - torch==1.7.1+cu110.moreh23.1.1
+    - -r requirements.txt
+    - packaging
+      # - git+https://github.com/NVIDIA/apex.git  # has to do it manually
