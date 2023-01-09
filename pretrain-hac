@@ -7,9 +7,9 @@ export WORLD_SIZE=1
 export MASTER_ADDR=127.0.0.1
 export MASTER_PORT=12345
 
-python -m torch.distributed.launch \
+/usr/bin/env python3 -m torch.distributed.launch \
         --nproc_per_node 1 \
         main_simmim.py \
         --cfg configs/swin_base__800ep/simmim_pretrain__swin_base__img192_window6__800ep.yaml \
         --batch-size 128 \
-        --data-path /data/work/datasets/imagenet_100cls/train
+        --data-path /nas/common_data/imagenet_100cls/train
